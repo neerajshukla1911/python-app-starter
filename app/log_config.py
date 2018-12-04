@@ -1,6 +1,6 @@
 from config_reader import get_config
 
-config = get_config('logging')
+config = get_config()
 
 
 def get_log_config():
@@ -11,7 +11,7 @@ def get_log_config():
             'file': {
                 'level': 'DEBUG',
                 'class': 'logging.handlers.RotatingFileHandler',
-                'filename': config['log_file_name'],
+                'filename': config['logging']['log_file_name'],
                 'maxBytes': 1024 * 1024 * 50,
                 'backupCount': 10,
                 'formatter': 'file'

@@ -3,7 +3,7 @@ import click
 
 cli = click.Group()
 
-from cli import *
+from app.cli import *
 
 if __name__ == '__main__':
     cli()
